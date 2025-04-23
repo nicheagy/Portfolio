@@ -4,13 +4,13 @@
 @font-face {
     /* Define custom font for Minecraft logo aesthetic */
     font-family: 'MineCrafter';
-    src: url('minecraft_font.ttf') format('truetype');
+    src: url('Minecraft Styles/Minecrafter-MA3Dw.ttf') format('truetype');
 }
 
 /* Apply Minecraft grass block background to body */
 body {
     /* Reference local grass block image using url() */
-    background-image: url('MinecraftGrassBlock.jpg');
+    background-image: url('Minecraft Styles/MinecraftGrassBlock.jpg');
     background-repeat: repeat;
     /* Ensure background tiles naturally */
     background-size: auto;
