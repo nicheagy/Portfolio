@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <!-- Responsive viewport for mobile compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Personal Portfolio</title>
+    <title>Skills - My Personal Portfolio</title>
     <!-- Link to external CSS for consistent styling -->
     <link rel="stylesheet" href="styles.css">
+    <!-- jQuery CDN for core functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI CDN for autosuggest feature -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery UI CSS for styling autosuggest -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 <body>
     <!-- Header with navigation for consistent site-wide menu -->
@@ -26,19 +32,26 @@
     </header>
     <!-- Main content area -->
     <main>
-        <!-- Hero section for introductory content -->
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <!-- Profile image placeholder -->
-            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-            <p>Hi, I'm Nicholas Eagy! Explore my work and get to know me.</p>
+        <!-- Content section for skills display and search -->
+        <section class="content">
+            <h1>My Skills</h1>
+            <!-- Input for autosuggest skill search -->
+            <input type="text" id="skills-search" placeholder="Search skills...">
+            <!-- Container for skill list -->
+            <div id="skills-list">
+                <p class="skill">HTML</p>
+                <p class="skill">CSS</p>
+                <p class="skill">JavaScript</p>
+                <p class="skill">jQuery</p>
+                <p class="skill">Python</p>
+            </div>
         </section>
     </main>
     <!-- Footer with copyright information -->
     <footer>
         <p>© 2025 Nicholas Eagy. All rights reserved.</p>
     </footer>
-    <!-- Link to main JavaScript for general functionality -->
-    <script src="main.js"></script>
+    <!-- Link to jQuery-specific JavaScript for effects and autosuggest -->
+    <script src="jquery.js"></script>
 </body>
 </html>

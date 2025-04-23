@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <!-- Responsive viewport for mobile compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Personal Portfolio</title>
+    <title>Stats - My Personal Portfolio</title>
     <!-- Link to external CSS for consistent styling -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN for bar chart visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Header with navigation for consistent site-wide menu -->
@@ -26,19 +28,18 @@
     </header>
     <!-- Main content area -->
     <main>
-        <!-- Hero section for introductory content -->
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <!-- Profile image placeholder -->
-            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-            <p>Hi, I'm Nicholas Eagy! Explore my work and get to know me.</p>
+        <!-- Content section for stats visualization -->
+        <section class="content">
+            <h1>My Stats</h1>
+            <!-- Canvas for Chart.js bar chart -->
+            <canvas id="skillsChart"></canvas>
         </section>
     </main>
     <!-- Footer with copyright information -->
     <footer>
         <p>© 2025 Nicholas Eagy. All rights reserved.</p>
     </footer>
-    <!-- Link to main JavaScript for general functionality -->
-    <script src="main.js"></script>
+    <!-- Link to Chart.js-specific JavaScript for stats page -->
+    <script src="final.js"></script>
 </body>
 </html>
