@@ -1,45 +1,67 @@
-/* minecraft-styles.css: Minecraft-themed styles for About page */
-
 /* Import MineCrafter font from local project folder */
 @font-face {
     /* Define custom font for Minecraft logo aesthetic */
     font-family: 'MineCrafter';
     src: url('Minecraft Styles/Minecrafter-MA3Dw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Apply Minecraft grass block background to body */
 body {
-    /* Reference local grass block image using url() */
+    /* Reference local grass block image (confirmed working) */
     background-image: url('Minecraft Styles/MinecraftGrassBlock.jpg');
     background-repeat: repeat;
     /* Ensure background tiles naturally */
     background-size: auto;
     /* White text for readability against dark grass texture */
     color: #fff;
-    /* Fallback background color if image fails to load */
+    /* Fallback background color if image fails */
     background-color: #3c2f2f; /* Minecraft dirt-like brown */
 }
 
-/* Apply MineCrafter font to key text elements */
-body, h1, p, nav ul li a, #contact-form label, #contact-form input, #contact-form textarea, #contact-form button, footer p {
-    /* Use MineCrafter font with Arial and sans-serif as fallbacks */
+/* Apply MineCrafter font to key text elements with larger sizes */
+body {
+    /* Set base font family for consistency */
     font-family: 'MineCrafter', 'Arial', sans-serif;
 }
 
-/* Enhance heading with Minecraft logo effect */
 h1 {
-    /* Larger font size and shadow for logo-like appearance */
-    font-size: 2.5em;
+    /* Larger font size for heading with Minecraft logo effect */
+    font-size: 3em; /* Increased from 2.5em */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Style main content area for readability */
+p {
+    /* Larger font size for paragraphs */
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.5em; /* Increased for visibility */
+}
+
+nav ul li a {
+    /* Larger font size for navigation links */
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.4em; /* Increased for visibility */
+}
+
+#contact-form label, #contact-form input, #contact-form textarea, #contact-form button {
+    /* Ensure form elements use MineCrafter font with larger size */
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.3em; /* Increased for visibility */
+}
+
+footer p {
+    /* Larger font size for footer */
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.3em; /* Increased for visibility */
+}
+
+/* Style main content area without semi-transparent background */
 main {
-    /* Semi-transparent white background to contrast with grass block */
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Black text for readability on light background */
+    /* Removed background-color to eliminate semi-transparent box */
+    /* Black text for main content; switch to color: #fff if readability is poor */
     color: #000;
-    /* Add padding and rounded corners */
+    /* Maintain padding and rounded corners */
     padding: 2em;
     border-radius: 10px;
 }
@@ -60,4 +82,72 @@ footer {
 .content-img {
     /* Blocky border to match Minecraft aesthetic */
     border: 2px solid #555;
+}
+
+/* Slideshow container styling */
+.slideshow-container {
+    /* Center the slideshow and constrain width */
+    max-width: 600px;
+    position: relative;
+    margin: 1em auto;
+}
+
+/* Style slideshow images */
+.slide-img {
+    /* Ensure images fill the container */
+    width: 100%;
+    height: auto;
+    /* Minecraft-style blocky border */
+    border: 2px solid #555;
+    border-radius: 5px;
+    /* Ensure images are hidden by default */
+    display: none;
+}
+
+/* Show the active slide */
+.slide.active {
+    display: block;
+}
+
+/* Fade animation for slides */
+.fade {
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Navigation buttons styling */
+.prev, .next {
+    /* Position buttons on sides of slideshow */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.5em;
+    background-color: rgba(51, 51, 51, 0.8); /* Minecraft-style dark background */
+    border: 2px solid #555;
+    border-radius: 5px;
+    user-select: none;
+}
+
+/* Position previous button on left */
+.prev {
+    left: 10px;
+}
+
+/* Position next button on right */
+.next {
+    right: 10px;
+}
+
+/* Hover effect for buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(85, 85, 85, 0.8); /* Lighter gray on hover */
 }

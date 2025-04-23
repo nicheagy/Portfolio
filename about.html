@@ -31,8 +31,36 @@
         <!-- Content section for about information -->
         <section class="content">
             <h1>About Me</h1>
-            <!-- About image placeholder -->
+            <!-- Existing placeholder image -->
             <img src="about.jpg" alt="About Me" class="content-img">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Slideshow images -->
+                <div class="slide fade">
+                    <img src="images/ArizonaHike.jpg" alt="Photo of Me 1" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/ChickFilA.jpg" alt="Photo of Me 2" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/FiestaBowl.jpg" alt="Photo of Me 3" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/LibertyFootball.jpg" alt="Photo of Me 4" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/OhioState.JPG" alt="Photo of Me 5" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/SeniorSoccer.jpg" alt="Photo of Me 6" class="slide-img">
+                </div>
+                <div class="slide fade">
+                    <img src="images/SoloSoccer.jpg" alt="Photo of Me 7" class="slide-img">
+                </div>
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="changeSlide(-1)">❮</a>
+                <a class="next" onclick="changeSlide(1)">❯</a>
+            </div>
             <!-- User-provided personal information -->
             <p>I'm 21 years old and a junior in college, pursuing a Computer Science degree with a specialization in Software Engineering. I'm set to graduate in May 2026.</p>
             <!-- Information about hometown and background -->
@@ -41,11 +69,9 @@
             <p>I love being outdoors, whether I'm playing sports, engaging in activities, or just hanging out with friends. Additionally, I'm a big fan of video games, and my all-time favorite game is Minecraft, which I've enjoyed for years.</p>
         </section>
     </main>
-    <!-- Footer with copyright information -->
-    <footer>
-        <p>© 2025 Nicholas Eagy. All rights reserved.</p>
-    </footer>
     <!-- Link to main JavaScript for general functionality -->
     <script src="main.js"></script>
+    <!-- Link to slideshow JavaScript for slideshow functionality -->
+    <script src="slideshow.js"></script>
 </body>
 </html>
