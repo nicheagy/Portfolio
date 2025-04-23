@@ -1,0 +1,63 @@
+/* minecraft-styles.css: Minecraft-themed styles for About page */
+
+/* Import MineCrafter font from project folder */
+@font-face {
+    /* Define custom font for Minecraft logo aesthetic */
+    font-family: 'MineCrafter';
+    src: url('MinecraftTen-VGORe.ttf') format('truetype');
+    /* Fallback to sans-serif if MineCrafter is unavailable */
+    font-family: 'Minecraftia', sans-serif;
+}
+
+/* Apply Minecraft grass block background to body */
+body {
+    /* Set grass block texture as repeating background */
+    background-image: url('MinecraftGrassBlock.jpg');
+    background-repeat: repeat;
+    /* Ensure background tiles naturally */
+    background-size: auto;
+    /* White text for readability against dark grass texture */
+    color: #fff;
+}
+
+/* Apply MineCrafter font to key text elements */
+body, h1, p, nav ul li a, #contact-form label, #contact-form input, #contact-form textarea, #contact-form button, footer p {
+    /* Use MineCrafter font with fallbacks */
+    font-family: 'MineCrafter', 'Minecraftia', sans-serif;
+}
+
+/* Enhance heading with Minecraft logo effect */
+h1 {
+    /* Larger font size and shadow for logo-like appearance */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style main content area for readability */
+main {
+    /* Semi-transparent white background to contrast with grass block */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Black text for readability on light background */
+    color: #000;
+    /* Add padding and rounded corners */
+    padding: 2em;
+    border-radius: 10px;
+}
+
+/* Style header for contrast with background */
+header {
+    /* Semi-transparent dark background for navigation */
+    background-color: rgba(51, 51, 51, 0.8); /* #333 with opacity */
+}
+
+/* Style footer for consistency */
+footer {
+    /* Semi-transparent dark background for footer */
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+/* Add Minecraft-style border to images */
+.content-img {
+    /* Blocky border to match Minecraft aesthetic */
+    border: 2px solid #555;
+}
