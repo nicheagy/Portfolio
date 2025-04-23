@@ -1,29 +1,29 @@
 /* minecraft-styles.css: Minecraft-themed styles for About page */
 
-/* Import MineCrafter font from project folder */
+/* Import MineCrafter font from local project folder */
 @font-face {
     /* Define custom font for Minecraft logo aesthetic */
     font-family: 'MineCrafter';
-    src: url('MinecraftTen-VGORe.ttf') format('truetype');
-    /* Fallback to sans-serif if MineCrafter is unavailable */
-    font-family: 'Minecraftia', sans-serif;
+    src: url('minecraft_font.ttf') format('truetype');
 }
 
 /* Apply Minecraft grass block background to body */
 body {
-    /* Set grass block texture as repeating background */
+    /* Reference local grass block image using url() */
     background-image: url('MinecraftGrassBlock.jpg');
     background-repeat: repeat;
     /* Ensure background tiles naturally */
     background-size: auto;
     /* White text for readability against dark grass texture */
     color: #fff;
+    /* Fallback background color if image fails to load */
+    background-color: #3c2f2f; /* Minecraft dirt-like brown */
 }
 
 /* Apply MineCrafter font to key text elements */
 body, h1, p, nav ul li a, #contact-form label, #contact-form input, #contact-form textarea, #contact-form button, footer p {
-    /* Use MineCrafter font with fallbacks */
-    font-family: 'MineCrafter', 'Minecraftia', sans-serif;
+    /* Use MineCrafter font with Arial and sans-serif as fallbacks */
+    font-family: 'MineCrafter', 'Arial', sans-serif;
 }
 
 /* Enhance heading with Minecraft logo effect */
