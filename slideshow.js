@@ -1,5 +1,4 @@
 // slideshow.js: Handles slideshow functionality for About page
-
 let slideIndex = 0;
 let slides = document.getElementsByClassName("slide");
 let autoSlideTimeout;
