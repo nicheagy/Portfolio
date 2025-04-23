@@ -1,3 +1,5 @@
+/* minecraft-styles.css: Minecraft-themed styles for About page with the help of Grok(AI) */
+
 /* Import MineCrafter font from local project folder */
 @font-face {
     /* Define custom font for Minecraft logo aesthetic */
@@ -50,16 +52,10 @@ nav ul li a {
     font-size: 1.3em; /* Increased for visibility */
 }
 
-footer p {
-    /* Larger font size for footer */
-    font-family: 'MineCrafter', 'Arial', sans-serif;
-    font-size: 1.3em; /* Increased for visibility */
-}
-
 /* Style main content area without semi-transparent background */
 main {
     /* Removed background-color to eliminate semi-transparent box */
-    /* Black text for main content; switch to color: #fff if readability is poor */
+    /* Black text for main content; change to color: #fff if readability is poor */
     color: #000;
     /* Maintain padding and rounded corners */
     padding: 2em;
@@ -72,82 +68,41 @@ header {
     background-color: rgba(51, 51, 51, 0.8); /* #333 with opacity */
 }
 
-/* Style footer for consistency */
-footer {
-    /* Semi-transparent dark background for footer */
-    background-color: rgba(51, 51, 51, 0.8);
-}
-
 /* Add Minecraft-style border to images */
 .content-img {
     /* Blocky border to match Minecraft aesthetic */
     border: 2px solid #555;
 }
 
-/* Slideshow container styling */
-.slideshow-container {
-    /* Center the slideshow and constrain width */
-    max-width: 600px;
-    position: relative;
-    margin: 1em auto;
+/* Gallery styling */
+.gallery {
+    /* Use CSS Grid for responsive layout */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 1em; /* Space between images */
+    max-width: 800px; /* Constrain width */
+    margin: 1em auto; /* Center the gallery */
 }
 
-/* Style slideshow images */
-.slide-img {
-    /* Ensure images fill the container */
+/* Style gallery images */
+.gallery-img {
+    /* Ensure images are responsive */
     width: 100%;
     height: auto;
     /* Minecraft-style blocky border */
     border: 2px solid #555;
     border-radius: 5px;
-    /* Ensure images are hidden by default */
-    display: none;
 }
 
-/* Show the active slide */
-.slide.active {
-    display: block;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
 }
 
-/* Fade animation for slides */
-.fade {
-    animation: fade 1s ease-in-out;
-}
-
-@keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* Navigation buttons styling */
-.prev, .next {
-    /* Position buttons on sides of slideshow */
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 10px;
-    color: white;
-    font-family: 'MineCrafter', 'Arial', sans-serif;
-    font-size: 1.5em;
-    background-color: rgba(51, 51, 51, 0.8); /* Minecraft-style dark background */
-    border: 2px solid #555;
-    border-radius: 5px;
-    user-select: none;
-}
-
-/* Position previous button on left */
-.prev {
-    left: 10px;
-}
-
-/* Position next button on right */
-.next {
-    right: 10px;
-}
-
-/* Hover effect for buttons */
-.prev:hover, .next:hover {
-    background-color: rgba(85, 85, 85, 0.8); /* Lighter gray on hover */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
 }
