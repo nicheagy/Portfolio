@@ -92,6 +92,8 @@ header {
     /* Minecraft-style blocky border */
     border: 2px solid #555;
     border-radius: 5px;
+    /* Make images clickable */
+    cursor: pointer;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -105,4 +107,62 @@ header {
     .gallery {
         grid-template-columns: 1fr; /* 1 column on mobile */
     }
+}
+
+/* Fullscreen container styling */
+.fullscreen {
+    /* Hidden by default */
+    display: none;
+    /* Cover entire viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Show fullscreen when active */
+.fullscreen.active {
+    display: flex;
+}
+
+/* Style fullscreen image */
+#fullscreen-img {
+    /* Fit image within viewport */
+    max-width: 90%;
+    max-height: 80%;
+    /* Maintain aspect ratio */
+    width: auto;
+    height: auto;
+    /* Minecraft-style border */
+    border: 2px solid #555;
+    border-radius: 5px;
+}
+
+/* Style close button */
+#close-fullscreen {
+    /* Position above image */
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    /* Minecraft-style button */
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    font-family: 'MineCrafter', 'Arial', sans-serif;
+    font-size: 1.5em;
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for close button */
+#close-fullscreen:hover {
+    background-color: rgba(85, 85, 85, 0.8);
 }
