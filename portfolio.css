@@ -1,0 +1,178 @@
+/* Global styles for consistent layout and design */
+/* Grok(AI) for the background help */
+body {
+    /* Set font and remove default margins */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Use flexbox for centered, full-height layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Lo-fi city night background */
+    background-image: url('images/lofi_city.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Semi-transparent overlay for text readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+header, main {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header styling for navigation */
+header {
+    /* Full-width header with dark background */
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Navigation list styling */
+nav ul {
+    /* Remove default list styling */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation list items */
+nav ul li {
+    /* Inline display for horizontal menu */
+    display: inline;
+    margin: 0 1em;
+}
+
+/* Navigation link styling */
+nav ul li a {
+    /* White text with bold font for navigation */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+    /* Lighter color on hover for navigation links */
+    color: #ddd;
+}
+
+/* Main content styling */
+main {
+    /* Flexible content area with centered alignment */
+    flex: 1;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2em 0;
+    /* White font color for main section */
+    color: #FFFFFF;
+}
+
+/* Content section spacing */
+.content {
+    /* Add spacing below section */
+    margin-bottom: 2em;
+}
+
+/* Project section general styling */
+.project-section {
+    /* Add padding and margin for spacing */
+    padding: 1.5em;
+    margin: 1em 0;
+    /* Rounded corners and subtle border */
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+    /* Smooth transition for hover effect */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for project sections */
+.project-section:hover {
+    /* Slight scale-up on hover */
+    transform: scale(1.02);
+}
+
+/* Specific background colors for each project section */
+.database-design {
+    background-color: #4A90E2; /* Soft Blue */
+}
+
+.computer-architecture {
+    background-color: #7B4B94; /* Deep Purple */
+}
+
+.network-architecture {
+    background-color: #6B8E23; /* Olive Green */
+}
+
+.linux-os {
+    background-color: #E67E22; /* Warm Orange */
+}
+
+.data-structures {
+    background-color: #20B2AA; /* Teal */
+}
+
+/* Project section heading styling */
+.project-section h2 {
+    /* Slightly larger font for headings */
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Project section list styling */
+.project-section ul {
+    /* Remove default list styling */
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* Project section list item styling */
+.project-section li {
+    /* Add bullet points and spacing */
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+/* Add custom bullet points */
+.project-section li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FFFFFF;
+}
+
+/* Projects link styling */
+.projects-link {
+    /* White text with bold font, matching main section */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Projects link hover effect */
+.projects-link:hover {
+    /* Slightly lighter color on hover */
+    color: #E0E0E0;
+}
