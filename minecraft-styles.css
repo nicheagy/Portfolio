@@ -135,3 +135,14 @@ header {
 #close-fullscreen:hover {
     background-color: rgba(85, 85, 85, 0.8);
 }
+
+/* Content styling for semi-transparent white box */
+.content {
+    background-color: rgba(255, 255, 255, 0.7); /* White with 70% transparency */
+    padding: 20px; /* Space inside the box */
+    margin: 20px auto; /* Center it with space around */
+    width: 80%; /* Adjust width */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #000; /* Override the font color for better readability */
+}
