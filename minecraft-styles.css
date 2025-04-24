@@ -2,157 +2,127 @@
 
 /* Import MineCrafter font from local project folder */
 @font-face {
-    /* Define custom font for Minecraft logo aesthetic */
     font-family: 'MineCrafter';
     src: url('Minecraft Styles/Minecrafter-MA3Dw.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/* Apply Minecraft grass block background to body */
+/* Apply Minecraft grass block background and base styling to body */
 body {
-    /* Reference local grass block image (confirmed working) */
     background-image: url('Minecraft Styles/MinecraftGrassBlock.jpg');
     background-repeat: repeat;
-    /* Ensure background tiles naturally */
     background-size: auto;
-    /* White text for readability against dark grass texture */
     color: #fff;
-    /* Fallback background color if image fails */
-    background-color: #3c2f2f; /* Minecraft dirt-like brown */
-}
-
-/* Apply MineCrafter font to key text elements with larger sizes */
-body {
-    /* Set base font family for consistency */
+    background-color: #3c2f2f;
     font-family: 'MineCrafter', 'Arial', sans-serif;
 }
 
 h1 {
-    /* Larger font size for heading with Minecraft logo effect */
-    font-size: 3em; /* Increased from 2.5em */
+    font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
-    /* Larger font size for paragraphs */
     font-family: 'MineCrafter', 'Arial', sans-serif;
-    font-size: 1.5em; /* Increased for visibility */
+    font-size: 1.5em;
 }
 
 nav ul li a {
-    /* Larger font size for navigation links */
     font-family: 'MineCrafter', 'Arial', sans-serif;
-    font-size: 1.4em; /* Increased for visibility */
+    font-size: 1.4em;
 }
 
-#contact-form label, #contact-form input, #contact-form textarea, #contact-form button {
-    /* Ensure form elements use MineCrafter font with larger size */
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
     font-family: 'MineCrafter', 'Arial', sans-serif;
-    font-size: 1.3em; /* Increased for visibility */
+    font-size: 1.3em;
 }
 
-/* Style main content area without semi-transparent background */
+/* Style main content area */
 main {
-    /* Removed background-color to eliminate semi-transparent box */
-    /* Black text for main content; change to color: #fff if readability is poor */
     color: #000;
-    /* Maintain padding and rounded corners */
     padding: 2em;
     border-radius: 10px;
 }
 
 /* Style header for contrast with background */
 header {
-    /* Semi-transparent dark background for navigation */
-    background-color: rgba(51, 51, 51, 0.8); /* #333 with opacity */
+    background-color: rgba(51, 51, 51, 0.8);
 }
 
 /* Add Minecraft-style border to images */
 .content-img {
-    /* Blocky border to match Minecraft aesthetic */
     border: 2px solid #555;
 }
 
 /* Gallery styling */
 .gallery {
-    /* Use CSS Grid for responsive layout */
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-    gap: 1em; /* Space between images */
-    max-width: 800px; /* Constrain width */
-    margin: 1em auto; /* Center the gallery */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    max-width: 800px;
+    margin: 1em auto;
 }
 
 /* Style gallery images */
 .gallery-img {
-    /* Ensure images are responsive */
     width: 100%;
     height: auto;
-    /* Minecraft-style blocky border */
     border: 2px solid #555;
     border-radius: 5px;
-    /* Make images clickable */
     cursor: pointer;
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: 1fr; /* 1 column on mobile */
+        grid-template-columns: 1fr;
     }
 }
 
 /* Fullscreen container styling */
 .fullscreen {
-    /* Hidden by default */
-    display: none;
-    /* Cover entire viewport */
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Dark semi-transparent background */
     background-color: rgba(0, 0, 0, 0.9);
-    /* Center content */
-    display: flex;
+    /* Flex container properties for centering content when active */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1000;
 }
 
-/* Show fullscreen when active */
+/* Show fullscreen when "active" class is applied */
 .fullscreen.active {
     display: flex;
 }
 
 /* Style fullscreen image */
 #fullscreen-img {
-    /* Fit image within viewport */
     max-width: 90%;
     max-height: 80%;
-    /* Maintain aspect ratio */
     width: auto;
     height: auto;
-    /* Minecraft-style border */
     border: 2px solid #555;
     border-radius: 5px;
 }
 
 /* Style close button */
 #close-fullscreen {
-    /* Position above image */
     margin-top: 1em;
     padding: 0.5em 1em;
-    /* Minecraft-style button */
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     font-family: 'MineCrafter', 'Arial', sans-serif;
@@ -162,7 +132,6 @@ header {
     cursor: pointer;
 }
 
-/* Hover effect for close button */
 #close-fullscreen:hover {
     background-color: rgba(85, 85, 85, 0.8);
 }

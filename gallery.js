@@ -1,7 +1,5 @@
-// gallery.js: Handles fullscreen image functionality for About page gallery
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all gallery images
+    // Capture required DOM elements
     const galleryImages = document.querySelectorAll(".gallery-img");
     const fullscreenContainer = document.querySelector("#fullscreen");
     const fullscreenImg = document.querySelector("#fullscreen-img");
@@ -10,20 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add click event to each gallery image
     galleryImages.forEach((img) => {
         img.addEventListener("click", () => {
-            // Set fullscreen image source to clicked image
+            // Set fullscreen image source and alt attributes to match the clicked image
             fullscreenImg.src = img.src;
             fullscreenImg.alt = img.alt;
-            // Show fullscreen container
+            // Show fullscreen container by adding the "active" class
             fullscreenContainer.classList.add("active");
         });
     });
 
-    // Close fullscreen on button click
+    // Event listener to close fullscreen on button click
     closeButton.addEventListener("click", () => {
         fullscreenContainer.classList.remove("active");
     });
 
-    // Close fullscreen on Escape key press
+    // Event listener to close fullscreen on Escape key press
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && fullscreenContainer.classList.contains("active")) {
             fullscreenContainer.classList.remove("active");
