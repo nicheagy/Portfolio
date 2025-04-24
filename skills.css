@@ -81,11 +81,20 @@ main {
     margin: 1em 0;
 }
 
-/ indigenous /* Skills list paragraph styling */
-#skills-list p {
+/* Skills list paragraph styling */
+#skills-list .skill {
     /* Larger font for visibility */
     font-size: 1.2em;
     margin: 0.5em 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+}
+
+/* Skills list hyperlink hover effect */
+#skills-list .skill:hover {
+    /* Slightly lighter color on hover */
+    color: #E0E0E0;
 }
 
 /* Skills search input styling */
