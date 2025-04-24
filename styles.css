@@ -1,116 +1,196 @@
-/* Global styles for consistent layout and design */
-body {
-    /* Set font and remove default margins */
-    font-family: Arial, sans-serif;
+/* ---------------------------------------------
+   Reset & Global Styles
+--------------------------------------------- */
+* {
     margin: 0;
     padding: 0;
-    /* Use flexbox for centered, full-height layout */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* Header styling for navigation */
-header {
-    /* Full-width header with dark background */
-    width: 100%;
-    background-color: #333;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* ---------------------------------------------
+     Header & Navigation
+  --------------------------------------------- */
+  
+  /* Use the navigation styling you provided */
+  header {
+    background-color: #333; /* Dark background for header */
+    padding: 1rem 0;
     text-align: center;
-    padding: 1em 0;
-}
-
-/* Navigation list styling */
-nav ul {
+  }
+  
+  nav ul {
     /* Remove default list styling */
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-/* Navigation list items */
-nav ul li {
+  }
+  
+  nav ul li {
     /* Inline display for horizontal menu */
     display: inline;
     margin: 0 1em;
-}
-
-/* Navigation link styling */
-nav ul li a {
-    /* White text with bold font */
+  }
+  
+  nav ul li a {
+    /* White text with bold font for navigation */
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* Navigation link hover effect */
-nav ul li a:hover {
-    /* Lighter color on hover */
+  }
+  
+  nav ul li a:hover {
+    /* Lighter color on hover for navigation links */
     color: #ddd;
-}
-
-/* Main content styling */
-main {
-    /* Flexible content area with centered alignment */
-    flex: 1;
+  }
+  
+  /* ---------------------------------------------
+     Main Content
+  --------------------------------------------- */
+  main {
+    padding-top: 80px; /* Account for fixed header space */
     width: 80%;
     max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    padding: 2em 0;
-}
-
-/* Hero and content section spacing */
-.hero, .content {
+    padding-bottom: 2em;
+  }
+  
+  /* ---------------------------------------------
+     Hero Section
+  --------------------------------------------- */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
     margin-bottom: 2em;
-}
-
-/* Image styling for profile, content, and portfolio */
-.profile-img, .content-img, .portfolio-img {
-    /* Constrain image size and add rounded corners */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  
+  /* Button styling is preserved if needed elsewhere */
+  /* .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: #0056b3;
+  } */
+  
+  /* ---------------------------------------------
+     Additional Component Styles
+  --------------------------------------------- */
+  
+  /* Image styling for profile, content, and portfolio items */
+  .profile-img,
+  .content-img,
+  .portfolio-img {
     max-width: 200px;
     border-radius: 10px;
     margin: 1em 0;
-}
-
-/* Portfolio item spacing */
-.portfolio-item {
+  }
+  
+  /* Portfolio item spacing */
+  .portfolio-item {
     margin: 1em 0;
-}
-
-/* Skills list paragraph styling */
-#skills-list p {
-    /* Larger font for visibility */
+  }
+  
+  /* Skills list paragraph styling */
+  #skills-list p {
     font-size: 1.2em;
     margin: 0.5em 0;
-}
-
-/* Contact form container styling */
-#contact-form {
-    /* Centered flexbox layout for form elements */
+  }
+  
+  /* Contact form styling */
+  #contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Contact form label spacing */
-#contact-form label {
+  }
+  
+  #contact-form label {
     margin: 0.5em 0;
-}
-
-/* Contact form input and textarea styling */
-#contact-form input, #contact-form textarea {
-    /* Constrain width and add padding/border */
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
     width: 100%;
     max-width: 400px;
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* Contact form button styling */
-#contact-form button {
-    /* Dark button with white text */
+  }
+  
+  #contact-form button {
     padding: 0.5em 2em;
-    background-color: darkgrey
-}
+    background-color: darkgrey;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* ---------------------------------------------
+     Responsive Styles
+  --------------------------------------------- */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.4rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  }  
