@@ -63,6 +63,18 @@ main {
     color: #FFFFFF;
 }
 
+/* Footer content styling */
+footer{
+    /* Flexible content area with centered alignment */
+    flex: 1;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2em 0;
+    /* White font color for main section */
+    color: #FFFFFF;
+}
+
 /* Hero and content section spacing */
 .hero, .content {
     /* Add spacing below sections */
