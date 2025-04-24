@@ -1,0 +1,79 @@
+/* Global styles for consistent layout and design */
+body {
+    /* Set font and remove default margins */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Use flexbox for centered, full-height layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Black background */
+    background-color: #000000;
+}
+
+/* Header styling for navigation */
+header {
+    /* Full-width header with dark background */
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Navigation list styling */
+nav ul {
+    /* Remove default list styling */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation list items */
+nav ul li {
+    /* Inline display for horizontal menu */
+    display: inline;
+    margin: 0 1em;
+}
+
+/* Navigation link styling */
+nav ul li a {
+    /* White text with bold font for navigation */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+    /* Lighter color on hover for navigation links */
+    color: #DDDDDD;
+}
+
+/* Main content styling */
+main {
+    /* Flexible content area with centered alignment */
+    flex: 1;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    padding: 2em 0;
+    /* White font color for main section */
+    color: #FFFFFF;
+}
+
+/* Content section spacing */
+.content {
+    /* Add spacing below section */
+    margin-bottom: 2em;
+}
+
+/* Chart canvas styling */
+#skillsChart {
+    /* Ensure chart is responsive and centered */
+    max-width: 100%;
+    height: auto;
+    /* Add neon glow effect */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5);
+}
