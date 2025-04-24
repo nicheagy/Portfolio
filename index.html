@@ -6,7 +6,9 @@
   <!-- Responsive viewport for mobile compatibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Nicholas Eagy | Portfolio</title>
-  <!-- Link to external CSS for consistent, professional styling -->
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link to external CSS for additional styling -->
   <link rel="stylesheet" href="styles.css">
   <!-- Google Fonts for improved typography -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,34 +16,43 @@
 <body>
   <!-- Header with navigation -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="stats.html">Stats</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Nicholas Eagy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="stats.html">Stats</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <!-- Main content area -->
-  <main>
-    <!-- Hero section with background image, overlay, and profile image -->
-    <section class="hero">
-      <!-- Overlay to improve text readability -->
+  <main class="container">
+    <!-- Hero section -->
+    <section class="hero text-center bg-light py-5">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Welcome to My Portfolio</h1>
-        <!-- Profile image included within hero content -->
-        <img src="images/Professional.jpg" alt="Nicholas Eagy - Profile Picture" class="profile-img">
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <img src="images/Professional.jpg" alt="Nicholas Eagy - Profile Picture" class="rounded-circle profile-img mb-3" style="width: 150px;">
         <p>
           Hi, I'm Nicholas Eagy—a dedicated Software Engineer and Creative Professional.
           Explore my work and learn more about my professional journey.
         </p>
-        <!-- Removed the View Portfolio button as requested -->
       </div>
     </section>
   </main>
+  <!-- Include Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
